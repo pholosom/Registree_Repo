@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/site.css" />
+        <script src="js/jquery.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/dataTables.min.css"/>
+        <script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script>
+    
+    </head>
+    <body>
+        <div class="form-bg">
+       
+            <div class="container"  >
+            <h1>Students</h1>
+                <br/>  <br/>  
+                      
+                        
+                        <table class="table"  id="companyTable"  >
+                            <thead>
+                                <tr>
+                                    <th>Student ID</th>
+                                    <th>
+                                        University 
+                                    </th>
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        Mark
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr>
+                                        <td>
+                                            1
+                                        </td>
+                                        <td>
+                                            2
+                                        </td>
+                                        <td>
+                                            3
+                                        </td>
+                                        <td>
+                                           4
+                                        </td>
+                                      
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            1
+                                        </td>
+                                        <td>
+                                            2
+                                        </td>
+                                        <td>
+                                            3
+                                        </td>
+                                        <td>
+                                           4
+                                        </td>
+                                      
+                                    </tr>
+                            </tbody>
+                        </table>
+
+            </div>
+        
+        <footer class="footer">
+            <div class="container">
+                &copy; &nbsp; Registree &nbsp;2022
+            </div>
+        </footer>
+        
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/site.js" ></script>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                $('#companyTable').DataTable({
+                    "pagingType": "full_numbers"
+                });
+            });
+        </script>
+
+    </body>
+    </html>
