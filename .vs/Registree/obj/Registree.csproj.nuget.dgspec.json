@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Registree\\Registree_Repo\\Registree_Repo\\.vs\\Registree\\Registree.csproj": {}
+    "C:\\Users\\User\\Downloads\\Tutorial\\GraphQL\\registree\\Registree.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Registree\\Registree_Repo\\Registree_Repo\\.vs\\Registree\\Registree.csproj": {
+    "C:\\Users\\User\\Downloads\\Tutorial\\GraphQL\\registree\\Registree.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Registree\\Registree_Repo\\Registree_Repo\\.vs\\Registree\\Registree.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Downloads\\Tutorial\\GraphQL\\registree\\Registree.csproj",
         "projectName": "Registree",
-        "projectPath": "C:\\Users\\User\\Desktop\\Registree\\Registree_Repo\\Registree_Repo\\.vs\\Registree\\Registree.csproj",
+        "projectPath": "C:\\Users\\User\\Downloads\\Tutorial\\GraphQL\\registree\\Registree.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Registree\\Registree_Repo\\Registree_Repo\\.vs\\Registree\\obj\\",
+        "outputPath": "C:\\Users\\User\\Downloads\\Tutorial\\GraphQL\\registree\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -45,6 +45,34 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "GraphQL.Server.Ui.Voyager": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            },
+            "HotChocolate.AspNetCore": {
+              "target": "Package",
+              "version": "[12.5.0, )"
+            },
+            "HotChocolate.Data.EntityFramework": {
+              "target": "Package",
+              "version": "[12.5.0, )"
+            },
+            "Microsoft.EntityframeworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.EntityframeworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

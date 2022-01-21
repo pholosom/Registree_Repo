@@ -5,22 +5,39 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
+using Microsoft.EntityFrameworkCore;
+using Registree;
+using Registree.Data;
+using Registree.GraphQL;
 namespace Registree
 {
     public class Startup
     {
+        private readonly IConfiguration Configuration;
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+        public Startup(IConfiguration configuration)
+        {
+            Configuration=configuration;
+        }
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<AppDbContext>(opt=>opt.UseSqlServer
+            (Configuration.GetConnectionString("CommandConStr")));
+
+            services
+                .AddGraphQLServer()
+                .AddQueryType<Query>()
+                .AddFiltering()
+                .AddSorting();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
+        { 
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -30,10 +47,7 @@ namespace Registree
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                endpoints.MapGraphQL();
             });
         }
     }
