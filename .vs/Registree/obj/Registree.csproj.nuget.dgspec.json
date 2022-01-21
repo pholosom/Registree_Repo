@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Downloads\\Tutorial\\GraphQL\\registree\\Registree.csproj": {}
+    "C:\\Users\\User\\Desktop\\Registree\\Registree_Repo\\Registree_Repo\\.vs\\Registree\\Registree.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Downloads\\Tutorial\\GraphQL\\registree\\Registree.csproj": {
+    "C:\\Users\\User\\Desktop\\Registree\\Registree_Repo\\Registree_Repo\\.vs\\Registree\\Registree.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Downloads\\Tutorial\\GraphQL\\registree\\Registree.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Registree\\Registree_Repo\\Registree_Repo\\.vs\\Registree\\Registree.csproj",
         "projectName": "Registree",
-        "projectPath": "C:\\Users\\User\\Downloads\\Tutorial\\GraphQL\\registree\\Registree.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\Registree\\Registree_Repo\\Registree_Repo\\.vs\\Registree\\Registree.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Downloads\\Tutorial\\GraphQL\\registree\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Registree\\Registree_Repo\\Registree_Repo\\.vs\\Registree\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

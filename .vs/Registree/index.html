@@ -36,31 +36,168 @@
                             <tbody>
                                     <tr>
                                         <td>
-                                            1
+                                            0x0
                                         </td>
                                         <td>
-                                            2
+                                            UJ
                                         </td>
                                         <td>
-                                            3
+                                            Kelly Metz
                                         </td>
                                         <td>
-                                           4
+                                          49
                                         </td>
                                       
                                     </tr>
                                     <tr>
                                         <td>
-                                            1
+                                            0x1
                                         </td>
                                         <td>
-                                            2
+                                            UJ
                                         </td>
                                         <td>
-                                            3
+                                            Nicholas McDermott
                                         </td>
                                         <td>
-                                           4
+                                           43
+                                        </td>
+                                      
+                                    </tr>
+									 <tr>
+                                        <td>
+                                            0x2
+                                        </td>
+                                        <td>
+                                            UJ
+                                        </td>
+                                        <td>
+                                           Gerald O'Reilly
+                                        </td>
+                                        <td>
+                                        85
+                                        </td>
+                                      
+                                    </tr>
+									 <tr>
+                                        <td>
+                                            0x3
+                                        </td>
+                                        <td>
+                                            UJ
+                                        </td>
+                                        <td>
+                                           Hermina Howe
+                                        </td>
+                                        <td>
+                                       84
+                                        </td>
+                                      
+                                    </tr>
+									 <tr>
+                                        <td>
+                                            0x4
+                                        </td>
+                                        <td>
+                                            UJ
+                                        </td>
+                                        <td>
+                                           Arianna Pollich
+                                        </td>
+                                        <td>
+                                      64
+                                        </td>
+                                      
+                                    </tr>
+									<tr>
+                                        <td>
+                                            1x1
+                                        </td>
+                                        <td>
+                                            SU
+                                        </td>
+                                        <td>
+                                           Jovani Schroeder
+                                        </td>
+                                        <td>
+                                     62
+                                        </td>
+                                      
+                                    </tr>
+									<tr>
+                                        <td>
+                                            1x2
+                                        </td>
+                                        <td>
+                                            SU
+                                        </td>
+                                        <td>
+                                           Abdul Miller
+                                        </td>
+                                        <td>
+                                    40
+                                        </td>
+                                      
+                                    </tr>
+									<tr>
+                                        <td>
+                                            1x3
+                                        </td>
+                                        <td>
+                                            SU
+                                        </td>
+                                        <td>
+                                           Carlotta Bernhard
+                                        </td>
+                                        <td>
+                                    43
+                                        </td>
+                                      
+                                    </tr>
+										<tr>
+                                        <td>
+                                            1x4
+                                        </td>
+                                        <td>
+                                            SU
+                                        </td>
+                                        <td>
+                                           Hollis Stehr
+                                        </td>
+                                        <td>
+                                    60
+                                        </td>
+                                      
+                                    </tr>
+									 </tr>
+										<tr>
+                                        <td>
+                                            1x5
+                                        </td>
+                                        <td>
+                                            SU
+                                        </td>
+                                        <td>
+                                           Monserrat Moore
+                                        </td>
+                                        <td>
+                                   56
+                                        </td>
+                                      
+                                    </tr>
+									</tr>
+										<tr>
+                                        <td>
+                                            1x0
+                                        </td>
+                                        <td>
+                                            SU
+                                        </td>
+                                        <td>
+                                          Justen Kulas
+                                        </td>
+                                        <td>
+                                   88
                                         </td>
                                       
                                     </tr>
@@ -86,6 +223,43 @@
                 });
             });
         </script>
+		
+		//pull via code failed due to cross platform issues
+		<script src="js/prism.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.13.0/beautify.js"></script>
+			<script>
+			  (async function () {
+				const data = JSON.stringify({
+				  query: `{
+			characters(isMonster:true) {
+			  name
+			  episode {
+				name
+			  }
+			}
+		  }`,
+				});
 
+				const response = await fetch(
+				  'http://localhost:3000/graphql/',
+				  {
+					method: 'post',
+					body: data,
+					headers: {
+					  'Content-Type': 'application/json',
+					  'Content-Length': data.length,
+					  Authorization:
+						'Apikey DONOTSENDAPIKEYS',
+					},
+				  }
+				);
+
+				const json = await response.json();
+				document.getElementById('code').innerHTML = js_beautify(
+				  JSON.stringify(json.data)
+				);
+				Prism.highlightAll();
+			  })();
+			</script>
     </body>
     </html>
